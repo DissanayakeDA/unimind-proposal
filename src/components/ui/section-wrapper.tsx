@@ -52,7 +52,7 @@ export function SectionWrapper({
             </motion.h2>
             {subtitle && (
               <motion.p
-                className="mx-auto max-w-2xl text-slate-400"
+                className="mx-auto max-w-2xl text-muted-foreground"
                 initial={{ opacity: 0, y: 10 } as any}
                 whileInView={{ opacity: 1, y: 0 } as any}
                 viewport={{ once: true }}

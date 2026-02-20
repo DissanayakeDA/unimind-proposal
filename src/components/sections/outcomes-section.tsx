@@ -25,19 +25,19 @@ export function OutcomesSection() {
           >
             <div className="mb-4 flex items-center gap-4">
               <motion.div
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/15 to-teal-500/15 transition-colors group-hover:from-emerald-500/25 group-hover:to-teal-500/25"
+                className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 transition-colors group-hover:from-emerald-200 group-hover:to-teal-200"
                 whileHover={{ scale: 1.1 }}
               >
                 <DynamicIcon
                   name={outcome.icon}
-                  className="h-5 w-5 text-emerald-400"
+                  className="h-5 w-5 text-emerald-600"
                 />
               </motion.div>
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-lg font-semibold text-slate-900">
                 {outcome.title}
               </h3>
             </div>
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {outcome.description}
             </p>
           </GlassCard>

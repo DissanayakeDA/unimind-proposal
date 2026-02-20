@@ -22,16 +22,28 @@ export function IntroductionSection() {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/15">
-              <AlertTriangle className="h-5 w-5 text-red-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100">
+              <AlertTriangle className="h-5 w-5 text-red-600" />
             </div>
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold text-slate-900">
               Problem Statement
             </h3>
           </div>
-          <p className="leading-relaxed text-slate-400">
-            {introduction.problem}
-          </p>
+          <ul className="space-y-3">
+            {introduction.problem.map((item, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.3 }}
+                className="flex items-start gap-2"
+              >
+                <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
+                <span className="text-muted-foreground">{item}</span>
+              </motion.li>
+            ))}
+          </ul>
         </GlassCard>
 
         {/* Motivation */}
@@ -42,14 +54,26 @@ export function IntroductionSection() {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <div className="mb-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/15">
-              <Lightbulb className="h-5 w-5 text-amber-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
+              <Lightbulb className="h-5 w-5 text-amber-600" />
             </div>
-            <h3 className="text-lg font-semibold text-white">Motivation</h3>
+            <h3 className="text-lg font-semibold text-slate-900">Motivation</h3>
           </div>
-          <p className="leading-relaxed text-slate-400">
-            {introduction.motivation}
-          </p>
+          <ul className="space-y-3">
+            {introduction.motivation.map((item, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 + i * 0.1, duration: 0.3 }}
+                className="flex items-start gap-2"
+              >
+                <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                <span className="text-muted-foreground">{item}</span>
+              </motion.li>
+            ))}
+          </ul>
         </GlassCard>
       </div>
 
@@ -64,10 +88,10 @@ export function IntroductionSection() {
         {introduction.keyPoints.map((point, i) => (
           <div
             key={i}
-            className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4"
+            className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
           >
-            <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-            <p className="text-sm text-slate-300">{point}</p>
+            <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            <p className="text-sm text-muted-foreground">{point}</p>
           </div>
         ))}
       </motion.div>

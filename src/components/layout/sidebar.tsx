@@ -55,7 +55,7 @@ export function Sidebar() {
   return (
     <>
       {/* Progress bar */}
-      <div className="fixed left-0 right-0 top-0 z-50 h-1 bg-slate-800/50">
+      <div className="fixed left-0 right-0 top-0 z-50 h-1 bg-slate-200/50">
         <motion.div
           className="h-full bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500"
           style={{ width: `${scrollProgress}%` }}
@@ -66,26 +66,26 @@ export function Sidebar() {
       {/* Mobile toggle */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="fixed right-4 top-4 z-50 rounded-xl border border-white/10 bg-slate-900/80 p-2.5 backdrop-blur-lg lg:hidden"
+        className="fixed right-4 top-4 z-50 rounded-xl border border-slate-200 bg-white/80 p-2.5 backdrop-blur-lg lg:hidden"
         aria-label="Toggle navigation"
       >
         {mobileOpen ? (
-          <X className="h-5 w-5 text-purple-400" />
+          <X className="h-5 w-5 text-purple-600" />
         ) : (
-          <Menu className="h-5 w-5 text-purple-400" />
+          <Menu className="h-5 w-5 text-purple-600" />
         )}
       </button>
 
       {/* Desktop Sidebar */}
-      <nav className="fixed left-0 top-0 z-40 hidden h-screen w-64 flex-col border-r border-white/5 bg-slate-950/80 backdrop-blur-xl lg:flex">
+      <nav className="fixed left-0 top-0 z-40 hidden h-screen w-64 flex-col border-r border-slate-200 bg-white/95 backdrop-blur-xl lg:flex">
         {/* Brand */}
-        <div className="flex items-center gap-3 border-b border-white/5 px-5 py-5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-sm font-bold text-white shadow-lg shadow-purple-500/25">
+        <div className="flex items-center gap-3 border-b border-slate-200 px-5 py-5">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-sm font-bold text-white shadow-lg shadow-purple-500/10">
             U
           </div>
           <div>
-            <p className="text-sm font-semibold text-white">UniMind</p>
-            <p className="text-[11px] text-slate-500">Project Proposal</p>
+            <p className="text-sm font-semibold text-slate-900">UniMind</p>
+            <p className="text-[11px] text-muted-foreground">Project Proposal</p>
           </div>
         </div>
 
@@ -99,8 +99,8 @@ export function Sidebar() {
                   className={cn(
                     "group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
                     activeSection === item.id
-                      ? "bg-purple-500/15 text-purple-300 shadow-sm shadow-purple-500/10"
-                      : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
+                      ? "bg-purple-100 text-purple-700 shadow-sm shadow-purple-500/10"
+                      : "text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
                   )}
                 >
                   <DynamicIcon
@@ -108,8 +108,8 @@ export function Sidebar() {
                     className={cn(
                       "h-4 w-4 transition-colors",
                       activeSection === item.id
-                        ? "text-purple-400"
-                        : "text-slate-500 group-hover:text-slate-300"
+                        ? "text-purple-600"
+                        : "text-slate-400 group-hover:text-slate-600"
                     )}
                   />
                   {item.label}
@@ -127,8 +127,8 @@ export function Sidebar() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-white/5 px-5 py-4">
-          <p className="text-[11px] text-slate-600">
+        <div className="border-t border-slate-200 px-5 py-4">
+          <p className="text-[11px] text-slate-500">
             SLIIT • IT3040 • 2025/2026
           </p>
         </div>
@@ -146,19 +146,19 @@ export function Sidebar() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.nav
-              className="fixed left-0 top-0 z-50 h-screen w-72 border-r border-white/5 bg-slate-950/95 backdrop-blur-xl lg:hidden"
+              className="fixed left-0 top-0 z-50 h-screen w-72 border-r border-slate-200 bg-white/95 backdrop-blur-xl lg:hidden"
               initial={{ x: -288 }}
               animate={{ x: 0 }}
               exit={{ x: -288 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="flex items-center gap-3 border-b border-white/5 px-5 py-5">
+              <div className="flex items-center gap-3 border-b border-slate-200 px-5 py-5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-sm font-bold text-white">
                   U
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">UniMind</p>
-                  <p className="text-[11px] text-slate-500">
+                  <p className="text-sm font-semibold text-slate-900">UniMind</p>
+                  <p className="text-[11px] text-muted-foreground">
                     Project Proposal
                   </p>
                 </div>
@@ -172,8 +172,8 @@ export function Sidebar() {
                         className={cn(
                           "group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
                           activeSection === item.id
-                            ? "bg-purple-500/15 text-purple-300"
-                            : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
+                            ? "bg-purple-100 text-purple-700"
+                            : "text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
                         )}
                       >
                         <DynamicIcon
@@ -181,8 +181,8 @@ export function Sidebar() {
                           className={cn(
                             "h-4 w-4",
                             activeSection === item.id
-                              ? "text-purple-400"
-                              : "text-slate-500"
+                              ? "text-purple-600"
+                              : "text-slate-400"
                           )}
                         />
                         {item.label}
@@ -204,7 +204,7 @@ export function Sidebar() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-purple-600/80 text-white shadow-lg shadow-purple-500/20 backdrop-blur-lg transition-colors hover:bg-purple-500"
+            className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-purple-200 bg-purple-600 text-white shadow-lg shadow-purple-500/10 backdrop-blur-lg transition-colors hover:bg-purple-700"
             aria-label="Scroll to top"
           >
             <ChevronUp className="h-5 w-5" />

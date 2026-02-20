@@ -26,25 +26,25 @@ export function FutureSection() {
           >
             <div className="mb-4 flex items-center justify-between">
               <motion.div
-                className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500/15 to-blue-500/15 transition-colors group-hover:from-sky-500/25 group-hover:to-blue-500/25"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-sky-100 to-blue-100 transition-colors group-hover:from-sky-200 group-hover:to-blue-200"
                 whileHover={{ rotate: -10 }}
               >
                 <DynamicIcon
                   name={item.icon}
-                  className="h-5 w-5 text-sky-400"
+                  className="h-5 w-5 text-sky-600"
                 />
               </motion.div>
               <Badge
                 variant="secondary"
-                className="border border-sky-500/20 bg-sky-500/10 text-[10px] font-medium text-sky-300"
+                className="border border-sky-200 bg-sky-50 text-[10px] font-medium text-sky-700"
               >
                 {item.timeline}
               </Badge>
             </div>
-            <h3 className="mb-2 text-base font-semibold text-white">
+            <h3 className="mb-2 text-base font-semibold text-slate-900">
               {item.title}
             </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {item.description}
             </p>
           </GlassCard>
@@ -59,21 +59,21 @@ export function FutureSection() {
         transition={{ delay: 0.5, duration: 0.6 }}
         className="mt-20 text-center"
       >
-        <div className="mx-auto max-w-md rounded-2xl border border-white/5 bg-white/[0.02] p-8 backdrop-blur-sm">
+        <div className="mx-auto max-w-md rounded-2xl border border-slate-200 bg-white p-8 shadow-sm backdrop-blur-sm">
           <div className="mb-3 flex items-center justify-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 text-xs font-bold text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 to-indigo-700 text-xs font-bold text-white">
               U
             </div>
-            <span className="text-lg font-bold text-white">UniMind</span>
+            <span className="text-lg font-bold text-slate-900">UniMind</span>
           </div>
-          <p className="mb-2 text-sm text-slate-400">
+          <p className="mb-2 text-sm text-muted-foreground">
             {siteConfig.title}
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-500">
             {siteConfig.university} • {siteConfig.module} • {siteConfig.year}
           </p>
-          <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
-          <p className="mt-4 text-[11px] text-slate-700">
+          <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-purple-200 to-transparent" />
+          <p className="mt-4 text-[11px] text-slate-400">
             © {new Date().getFullYear()} UniMind Team. All rights reserved.
           </p>
         </div>

@@ -28,10 +28,10 @@ export function UserManagementSection() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/15">
-                  <Icon className="h-5 w-5 text-purple-400" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
+                  <Icon className="h-5 w-5 text-purple-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-slate-900">
                   {feature.title}
                 </h3>
               </div>
@@ -45,8 +45,8 @@ export function UserManagementSection() {
                     transition={{ delay: i * 0.1 + j * 0.05, duration: 0.3 }}
                     className="flex items-start gap-2"
                   >
-                    <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-400" />
-                    <span className="text-sm text-slate-300">{item}</span>
+                    <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
                   </motion.li>
                 ))}
               </ul>

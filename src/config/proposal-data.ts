@@ -14,39 +14,34 @@ export const siteConfig = {
   module: "IT Project Management – IT3040",
   year: "2025 / 2026",
   supervisorLabel: "Supervisor",
-  supervisor: "Ms. Janani Wijerathna",
+  supervisor: "Prof. Dilshan De Silva",
 };
 
 export interface TeamMember {
   name: string;
   id: string;
-  role: string;
   module: string;
 }
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Dissanayake D.A.",
-    id: "IT22277720",
-    role: "Team Lead / Full-Stack Developer",
+    name: "Dissanayake D A",
+    id: "IT23306622",
     module: "Community Feed & Discussions Module",
   },
   {
-    name: "Weerasinghe W.A.K.S.",
-    id: "IT22098724",
-    role: "Full-Stack Developer",
+    name: "Thashmila P H J",
+    id: "IT23315600",
     module: "Notes & AI Learning Assistant Module",
   },
   {
-    name: "Gunathilaka H.A.S.H.",
-    id: "IT22234462",
-    role: "Full-Stack Developer",
+    name: "G A M T N Bandara",
+    id: "IT23307612",
     module: "Real-Time Communication Module",
   },
   {
-    name: "Kasun Sandaruwan K.B.",
-    id: "IT22242204",
-    role: "Full-Stack Developer",
+    name: "K M D K Karunarathne",
+    id: "IT23313620",
     module: "User Management & AI Conversion Engine",
   },
 ];
@@ -54,22 +49,28 @@ export const teamMembers: TeamMember[] = [
 export const techBadges: string[] = [
   "Next.js",
   "NestJS",
-  "PostgreSQL",
+  "MongoDB",
   "Socket.io",
   "Gemini API",
   "TypeScript",
   "Tailwind CSS",
-  "Prisma",
+  "Mongoose",
   "Docker",
   "JWT",
 ];
 
 /* ---------- Section 2 : Introduction ---------- */
 export const introduction = {
-  problem:
-    "Sri Lankan university students frequently communicate academic ideas in Singlish — a romanized, informal mix of Sinhala and English. Existing platforms offer no support for understanding or preserving this linguistic style, causing confusion, knowledge loss, and exclusion for Sinhala-only readers.",
-  motivation:
-    "By leveraging Large Language Models (Google Gemini), UniMind bridges the communication gap. Students can write naturally in Singlish while the platform provides real-time, accurate Sinhala conversions — preserving academic intent and cultural nuance. This democratizes knowledge sharing across language barriers.",
+  problem: [
+    "Sri Lankan university students frequently communicate academic ideas in Singlish — a romanized, informal mix of Sinhala and English.",
+    "Existing platforms offer no support for understanding or preserving this linguistic style.",
+    "Causes confusion, knowledge loss, and exclusion for Sinhala-only readers due to language barriers.",
+  ],
+  motivation: [
+    "By leveraging Large Language Models (Google Gemini), UniMind bridges the communication gap.",
+    "Students can write naturally in Singlish while the platform provides real-time, accurate Sinhala conversions.",
+    "Preserves academic intent and cultural nuance while democratizing knowledge sharing.",
+  ],
   keyPoints: [
     "No existing platform supports Singlish ↔ Sinhala academic conversion",
     "Students lose valuable knowledge shared informally in chat groups",
@@ -378,7 +379,7 @@ export const architecture = {
     "API Gateway validates JWT & rate-limits",
     "Controller routes to appropriate Service",
     "Service executes business logic",
-    "Repository layer interacts with PostgreSQL",
+    "Repository layer interacts with MongoDB",
     "Response returned to client",
   ],
 };
@@ -407,10 +408,10 @@ export const techStack: TechItem[] = [
     icon: "Server",
   },
   {
-    name: "PostgreSQL",
+    name: "MongoDB",
     category: "Database",
     description:
-      "Robust relational database with ACID compliance and JSON support.",
+      "Flexible NoSQL document database with high scalability and rich query support.",
     icon: "Database",
   },
   {
@@ -442,10 +443,10 @@ export const techStack: TechItem[] = [
     icon: "Paintbrush",
   },
   {
-    name: "Prisma",
-    category: "ORM",
+    name: "Mongoose",
+    category: "ODM",
     description:
-      "Type-safe ORM for database queries, migrations, and schema management.",
+      "Elegant MongoDB object modeling with schema validation and middleware support.",
     icon: "Layers",
   },
   {

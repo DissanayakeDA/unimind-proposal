@@ -31,10 +31,10 @@ export function GlassCard({
   return (
     <motion.div
       className={cn(
-        "relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl",
-        "shadow-[0_8px_32px_rgba(0,0,0,0.12)]",
+        "relative rounded-2xl border border-white/40 bg-white/60 p-6 backdrop-blur-xl",
+        "shadow-sm hover:shadow-md transition-all",
         hoverGlow &&
-          "transition-shadow duration-500 hover:shadow-[0_8px_32px_rgba(139,92,246,0.15)] hover:border-purple-500/30",
+          "duration-500 hover:border-purple-500/30 hover:shadow-purple-500/10",
         className
       )}
       initial={initial}

@@ -27,11 +27,11 @@ export function NotesAISection() {
               transition={{ delay: i * 0.12, duration: 0.5 }}
               className="group"
             >
-              <div className="mb-5 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 transition-colors group-hover:from-violet-500/30 group-hover:to-purple-500/30">
-                  <Icon className="h-5 w-5 text-violet-400" />
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
+                  <Icon className="h-5 w-5 text-purple-600" />
                 </div>
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="text-lg font-semibold text-slate-900">
                   {feature.title}
                 </h3>
               </div>
@@ -45,8 +45,8 @@ export function NotesAISection() {
                     transition={{ delay: 0.15 + j * 0.06, duration: 0.3 }}
                     className="flex items-start gap-2"
                   >
-                    <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-400" />
-                    <span className="text-sm text-slate-300">{item}</span>
+                    <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
                   </motion.li>
                 ))}
               </ul>

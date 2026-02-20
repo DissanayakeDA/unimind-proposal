@@ -47,40 +47,40 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-/* ---- Dark academic theme (always dark) ---- */
+/* ---- Light academic theme ---- */
 :root {
   --radius: 0.625rem;
-  --background: #0a0a12;
-  --foreground: #e8e8f0;
-  --card: #12121e;
-  --card-foreground: #e8e8f0;
-  --popover: #12121e;
-  --popover-foreground: #e8e8f0;
-  --primary: #8b5cf6;
+  --background: #f8fafc; /* Slate 50 */
+  --foreground: #0f172a; /* Slate 900 */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #7c3aed; /* Violet 600 */
   --primary-foreground: #ffffff;
-  --secondary: #1e1e2e;
-  --secondary-foreground: #e8e8f0;
-  --muted: #1e1e2e;
-  --muted-foreground: #7c7c94;
-  --accent: #1e1e2e;
-  --accent-foreground: #e8e8f0;
+  --secondary: #f1f5f9; /* Slate 100 */
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9; /* Slate 100 */
+  --muted-foreground: #64748b; /* Slate 500 */
+  --accent: #f1f5f9; /* Slate 100 */
+  --accent-foreground: #0f172a;
   --destructive: #ef4444;
-  --border: rgba(255 255 255 / 0.08);
-  --input: rgba(255 255 255 / 0.12);
-  --ring: #8b5cf6;
-  --chart-1: #8b5cf6;
+  --border: #e2e8f0; /* Slate 200 */
+  --input: #e2e8f0;
+  --ring: #7c3aed;
+  --chart-1: #7c3aed;
   --chart-2: #6366f1;
   --chart-3: #a78bfa;
   --chart-4: #c4b5fd;
   --chart-5: #4f46e5;
-  --sidebar: #0a0a12;
-  --sidebar-foreground: #e8e8f0;
-  --sidebar-primary: #8b5cf6;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #7c3aed;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1e1e2e;
-  --sidebar-accent-foreground: #e8e8f0;
-  --sidebar-border: rgba(255 255 255 / 0.06);
-  --sidebar-ring: #8b5cf6;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #7c3aed;
 }
 
 @layer base {
@@ -100,7 +100,7 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(124, 58, 237, 0.2);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {

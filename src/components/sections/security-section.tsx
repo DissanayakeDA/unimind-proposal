@@ -24,18 +24,18 @@ export function SecuritySection() {
             className="group"
           >
             <motion.div
-              className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-red-500/15 to-orange-500/15 transition-colors group-hover:from-red-500/25 group-hover:to-orange-500/25"
+              className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-red-100 to-orange-100 transition-colors group-hover:from-red-200 group-hover:to-orange-200"
               whileHover={{ rotate: 10 }}
             >
               <DynamicIcon
                 name={item.icon}
-                className="h-5 w-5 text-red-400"
+                className="h-5 w-5 text-red-600"
               />
             </motion.div>
-            <h3 className="mb-2 text-base font-semibold text-white">
+            <h3 className="mb-2 text-base font-semibold text-slate-900">
               {item.title}
             </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {item.description}
             </p>
           </GlassCard>
